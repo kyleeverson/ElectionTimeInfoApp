@@ -24,10 +24,14 @@ namespace ElectionTimeInfoApp.Views
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            if (e.Item == null)
+            if (e.Item == null) {
                 return;
+            }
 
-            await DisplayAlert("Item Tapped", "An item was tapped.", "OK");
+            var vm = e.Item as CandidateViewModel;
+            var newPage = new CandidateTwitterViewPage();
+            newPage.BindingContext = vm;
+            await Navigation.PushAsync(newPage);
 
             //Deselect Item
             ((ListView)sender).SelectedItem = null;
