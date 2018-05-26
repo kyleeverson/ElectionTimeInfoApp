@@ -1,3 +1,4 @@
+using ElectionTimeInfoApp.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,8 +12,11 @@ namespace ElectionTimeInfoApp
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
-		}
+            var navpage = new NavigationPage();
+            var page = new CandidateListViewPage();
+            navpage.PushAsync(page);
+            MainPage = navpage;
+        }
 
 		protected override void OnStart ()
 		{
