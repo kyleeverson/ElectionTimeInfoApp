@@ -12,7 +12,9 @@ namespace ElectionTimeInfoApp
 		{
 			InitializeComponent();
 
-            var navpage = new NavigationPage();
+            var navpage = new NavigationPage {
+                BarBackgroundColor = Color.LightBlue
+            };
             var page = new CandidateListViewPage();
             navpage.PushAsync(page);
             MainPage = navpage;

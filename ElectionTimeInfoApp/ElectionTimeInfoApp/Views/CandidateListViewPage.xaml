@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ElectionTimeInfoApp.Views.CandidateListViewPage">
+             x:Class="ElectionTimeInfoApp.Views.CandidateListViewPage"
+             Title="Candidates">
   <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             ItemTapped="Handle_ItemTapped"
@@ -10,7 +11,10 @@
     <!--Built in Cells-->
     <ListView.ItemTemplate>
         <DataTemplate>
-            <TextCell Text="{Binding .}" />
+            <TextCell 
+                Text="{Binding Name}" 
+                Detail="Detail"
+                />
         </DataTemplate>
     </ListView.ItemTemplate>
     

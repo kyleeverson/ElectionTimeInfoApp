@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectionTimeInfoApp.ViewModels;
+using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
@@ -16,15 +17,9 @@ namespace ElectionTimeInfoApp.Views
 
         public CandidateListViewPage()
         {
+            CandidateListViewModel vm = new CandidateListViewModel();
             InitializeComponent();
-
-            Items = new ObservableCollection<string>
-            {
-                "Kate Brown",
-                "Knute Buehler"
-            };
-			
-			MyListView.ItemsSource = Items;
+            BindingContext = vm;
         }
 
         async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)
