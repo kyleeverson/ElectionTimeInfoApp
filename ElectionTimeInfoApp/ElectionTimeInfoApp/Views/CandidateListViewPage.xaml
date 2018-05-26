@@ -12,8 +12,8 @@
     <ListView.ItemTemplate>
         <DataTemplate>
             <TextCell 
-                Text="{Binding Name}" 
-                Detail="Detail"
+                Text="{ Binding Name }" 
+                Detail="{ Binding TwitterHandle }"
                 />
         </DataTemplate>
     </ListView.ItemTemplate>

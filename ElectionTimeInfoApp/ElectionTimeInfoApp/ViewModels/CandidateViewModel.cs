@@ -10,20 +10,11 @@ namespace ElectionTimeInfoApp.ViewModels
     {
         Candidate _candidate;
 
-        public string Name {
-            get {
-                return _candidate.Name;
-            }
-            set {
-                _candidate.Name = value;
-                RaisePropertyChanged("Name");
-            }
-        }
+        public string Name => _candidate.Name;
 
-        public CandidateViewModel(Candidate c)
-        {
-            _candidate = c;
-        }
+        public string TwitterHandle => _candidate.TwitterHandle;
+
+        public CandidateViewModel(Candidate c) => _candidate = c;
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -25,12 +25,15 @@ namespace ElectionTimeInfoApp.ViewModels
             _items = new ObservableCollection<CandidateViewModel>();
 
             var candidate1 = new Candidate {
-                Name = "Kate Brown"
+                Name = "Kate Brown",
+                TwitterHandle = "@KateBrownForOR"
             };
             var candidateViewModel1 = new CandidateViewModel(candidate1);
             _items.Add(candidateViewModel1);
             var candidate2 = new Candidate {
-                Name = "Knute Buehler"
+                Name = "Knute Buehler",
+                TwitterHandle = "@KnuteBuehler"
+
             };
             var candidateViewModel2 = new CandidateViewModel(candidate2);
             _items.Add(candidateViewModel2);
